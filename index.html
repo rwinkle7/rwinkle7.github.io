@@ -27,31 +27,101 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p><img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/v/t1.0-9/1385821_4896196941314_618613923_n.jpg?oh=c6e24a2681ea739b58cdbdc6ebf0a6e0&amp;oe=55567D0B&amp;__gda__=1432859588_d23f2d4efbdc4b42d293e208faef9f26" alt="Train">
-Photo taken by Robert Winkler</p>
+        <p>`var Beaver = function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.img = getImage("creatures/Hopper-Happy");
+    this.sticks = 0;
+};</p>
 
-<p>A poem by Robert Winkler:</p>
+<p>Beaver.prototype.draw = function() {
+    fill(255, 0, 0);
+    this.y = constrain(this.y, 0, height-50);
+    image(this.img, this.x, this.y, 40, 40);
+};</p>
 
-<h3>
-<a id="trains" class="anchor" href="#trains" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trains</h3>
+<p>Beaver.prototype.hop = function() {
+    this.img = getImage("creatures/Hopper-Jumping");
+    this.y -= 5;
+};</p>
 
-<p>Trains are cool.</p>
+<p>Beaver.prototype.fall = function() {
+    this.img = getImage("creatures/Hopper-Happy");
+    this.y += 5;
+};</p>
 
-<p>The train goes by</p>
+<p>Beaver.prototype.checkForStickGrab = function(stick) {
+    if ((stick.x &gt;= this.x &amp;&amp; stick.x &lt;= (this.x + 40)) &amp;&amp;
+        (stick.y &gt;= this.y &amp;&amp; stick.y &lt;= (this.y + 40))) {
+        stick.y = -400;
+        this.sticks++;
+    }
+};</p>
 
-<p>one cart at a time.</p>
+<p>var Stick = function(x, y) {
+    this.x = x;
+    this.y = y;
+};</p>
 
-<p>Toot Toot Toot</p>
+<p>Stick.prototype.draw = function() {
+    fill(89, 71, 0);
+    rectMode(CENTER);
+    rect(this.x, this.y, 5, 40);
+};</p>
 
-<p>Woot Woot Woot</p>
+<p>var beaver = new Beaver(200, 300);</p>
 
-<p>Chugalugalug</p>
+<p>var sticks = [];
+for (var i = 0; i &lt; 40; i++) {<br>
+    sticks.push(new Stick(i * 40 + 300, random(20, 260)));
+}</p>
 
-<p>The train went by</p>
+<p>var grassXs = [];
+for (var i = 0; i &lt; 25; i++) { 
+    grassXs.push(i*20);
+}</p>
 
-<p>one cart at a time.</p>
+<p>draw = function() {</p>
 
-<p>Trains are cool. </p>
+<pre><code>// static
+background(227, 254, 255);
+fill(130, 79, 43);
+rectMode(CORNER);
+rect(0, height*0.90, width, height*0.10);
+
+for (var i = 0; i &lt; grassXs.length; i++) {
+    image(getImage("cute/GrassBlock"), grassXs[i], height*0.85, 20, 20);
+    grassXs[i] -= 1;
+    if (grassXs[i] &lt;= -20) {
+        grassXs[i] = width;
+    }
+}
+
+for (var i = 0; i &lt; sticks.length; i++) {
+    sticks[i].draw();
+    beaver.checkForStickGrab(sticks[i]);
+    sticks[i].x -= 1;
+}
+
+textSize(18);
+text("Score: " + beaver.sticks, 20, 30);
+
+if (beaver.sticks/sticks.length &gt;= 0.95) {
+    textSize(36);
+    text("YOU WIN!!!!", 100, 200);
+}
+
+if (keyIsPressed &amp;&amp; keyCode === 0) {
+    beaver.hop();
+} else {
+    beaver.fall();
+}
+beaver.draw();
+</code></pre>
+
+<p>};</p>
+
+<p>`</p>
       </section>
     </div>
 
