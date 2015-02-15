@@ -27,1140 +27,699 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>`//Use Arrow Keys to move
-//Up arrow key to shoot fireball
-//don't let the bad guys touch you
-//Check out the sequel</p>
+        <p>`</p>
 
-<p>//100 + votes! this is Awesome</p>
+<p>/*
+Code Written by Cory Fogliani (Email: <a href="mailto:cory@ijustdontcare.com">cory@ijustdontcare.com</a>)
+Testers: Cory Fogliani, Chris Gordon
+Featured on JavaScript Kit (<a href="http://javascriptkit.com">http://javascriptkit.com</a>)
+For this and over 400+ free scripts, visit <a href="http://javascriptkit.com">http://javascriptkit.com</a>
+*/</p>
 
-<p>noStroke();</p>
-
-<p>var m = 119;
-var o = 300;
-var g = 500;
-var a = 300;
-var k = 1000;
-var t = 100;
-var kts = 2;
-var h = 1500;
-var b = 300;
-var bow = 2800;
-var ser = 110;
-var bowser = 5;
-var c = 2800;
-var e = 110;
-var hammerx = 100;
-var hammery = 1420;
-var fireball = 10;
-var sun = 300;
-var cloud = 259;
-var portal = 2500;
-var s = 1650;
-var p = 3600;
-var n = 100;
-var pac = -150;
-var pacs = 5;
-var w = 110;
-var portal2 = 4000;</p>
-
-<p>var draw = function() {</p>
-
-<p>background(189, 253, 255);</p>
-
-<p>fill(0, 227, 34);
-rect(0,300,400,100);</p>
-
-<p>fill(255, 233, 110);
-rect(0,353,400,35);</p>
-
-<p>//sun
-fill(255, 179, 0);
-rect(sun,125,30,30);
-fill(255, 153, 0);
-rect(sun+5,155,20,5);
-rect(sun+5,120,20,5);
-rect(sun-5,130,5,20);
-rect(sun+30,130,5,20);
-rect(sun,150,5,5);
-rect(sun,125,5,5);
-rect(sun+25,150,5,5);
-rect(sun+25,125,5,5);</p>
-
-<p>//cloud
-fill(255, 255, 255);
-rect(cloud,90,45,50);
-rect(cloud-90,70,90,90);
-rect(cloud-135,90,45,50);
-rect(cloud,80,10,10);
-rect(cloud,140,10,10);
-rect(cloud-100,80,10,10);
-rect(cloud-100,140,10,10);
-rect(cloud+40,100,10,35);
-rect(cloud-140,100,10,35);
-fill(0, 0, 0);
-rect(cloud-65,90,5,25);
-rect(cloud-25,90,5,25);
-rect(cloud-55,135,25,5);
-rect(cloud-60,130,5,5);
-rect(cloud-30,130,5,5);</p>
-
-<p>fill(255, 0, 0);
-textSize(15);
-text("Princess Peach has been kidnaped by Bowser",g-438,21);
-text("You must rescue her!",g-438,39);</p>
-
-<p>//FireBall
-fill(255, 0, 0);
-rect(fireball+160,340,5,5);
-rect(fireball+165,335,5,5);
-rect(fireball+170,335,5,5);
-rect(fireball+160,rect,5,5);
-rect(fireball+175,340,5,5);
-rect(fireball+160,345,5,5);
-rect(fireball+175,345,5,5);
-rect(fireball+165,350,5,5);
-rect(fireball+170,350,5,5);
-fill(255, 111, 0);
-rect(fireball+165,340,10,10);
-fill(255, 60, 0);
-rect(fireball+170,340,5,10);
-fill(255, 183, 0);
-rect(fireball+160,350,5,5);
-rect(fireball+160,335,5,5);
-rect(fireball+155,340,5,10);
-fill(255, 234, 0);
-rect(fireball+155,350,5,5);
-rect(fireball+150,340,5,10);
-rect(fireball+155,335,5,5);</p>
-
-<p>//Mario
-fill(255, 0, 0);
-rect(m,o,30,3);
-rect(m,o-3,21,3);
-rect(m+3,o-6,18,3);
-rect(m+9,o-9,12,3);
-fill(255, 221, 0);
-rect(m+15,o-3,6,3);
-rect(m+18,o-6,3,3);
-rect(m+21,o+3,-21,24);
-rect(m+21,o+6,9,3);
-rect(m+21,o+9,12,3);
-rect(m+21,o+12,12,3);
-rect(m+21,o+15,12,3);
-rect(m+9,o+24,15,3);
-rect(m+12,o+27,9,3);
-fill(110, 62, 0);
-rect(m+12,o+18,15,3);
-rect(m+15,o+21,12,3);
-rect(m+18,o+15,3,3);
-rect(m+12,o+3,3,6);
-rect(m+15,o+6,3,3);
-rect(m+3,o+3,3,6);
-rect(m+3,o+9,6,6);
-rect(m,o+3,6,3);
-rect(m-3,o+6,3,18);
-rect(m+-6,o+15,3,6);
-rect(m,o+24,3,3);
-fill(255, 0, 0);
-rect(m+3,o+27,9,3);
-rect(m+3,o+30,21,30);
-rect(m,o+30,6,25);
-rect(m+21,o+33,6,18);
-fill(110, 62, 0);
-rect(m+7,o+30,9,24);
-rect(m,o+30,3,9);
-rect(m+3,o+27,3,3);
-rect(m+3,o+30,3,3);
-rect(m+18,o+30,3,3);
-rect(m+18,o+33,6,3);
-rect(m+21,o+36,3,9);
-rect(m+18,o+36,3,8);
-fill(255, 213, 0);
-rect(m+24,o+42,3,3);
-rect(m+18,o+42,3,3);
-rect(m+7,o+48,9,9);
-fill(110, 62, 0);
-rect(m+8,o+60,12,12);
-rect(m+12,o+66,15,6);
-fill(255, 0, 0);
-rect(m+13,o+30,3,3);</p>
-
-<p>//Goomba
-fill(215, 100, 0);
-rect(g,a,15,5);
-rect(g-5,a+5,25,5);
-rect(g-10,a+10,35,5);
-rect(g-15,a+15,45,5);
-rect(g-20,a+20,55,5);
-rect(g-25,a+25,65,10);
-rect(g-30,a+35,75,15);
-rect(g-25,a+50,65,5);
-fill(0, 0, 0);
-rect(g-15,a+20,10,5);
-rect(g+20,a+20,10,5);
-rect(g+15,a+25,5,15);
-rect(g-5,a+25,5,15);
-rect(g,a+30,15,5);
-rect(g+25,a+60,10,5);
-rect(g-20,a+60,10,5);
-rect(g+15,a+65,25,10);
-rect(g-25,a+65,25,10);
-rect(g-20,a+70,25,10);
-rect(g+11,a+70,25,10);
-fill(255, 226, 173);
-rect(g,a+35,5,10);
-rect(g-10,a+40,10,5);
-rect(g-10,a+25,5,20);
-rect(g+10,a+35,5,10);
-rect(g+15,a+40,10,5);
-rect(g+20,a+25,5,20);
-rect(g-5,a+50,25,5);
-rect(g-5,a+50,25,5);
-rect(g-10,a+55,35,10);
-rect(g,a+65,15,5);
-rect(g+5,a+70,5,5);</p>
-
-<p>fill(0, 0, 0);
-textSize(10);
-text("you'll have to face foes such as GOOMBAS!",g-100,213);
-text("that are moving EXTREMELY slowly...",g-63,235);</p>
-
-<p>fill(0, 0, 0);
-rect(k-4,t,4,2);
-rect(k-6,t+2,2,10);
-rect(k,t+2,2,4);
-rect(k+2,t+6,2,10);
-rect(k,t+16,2,2);
-rect(k,t+8,2,6);
-rect(k-8,t+6,2,2);
-rect(k-10,t+8,2,2);
-rect(k-12,t+10,2,8);
-rect(k-12,t+10,2,8);
-rect(k-10,t+18,2,4);
-rect(k+4,t+16,2,10);
-rect(k+2,t+14,2,2);
-rect(k,t+22,2,2);
-rect(k-4,t+20,4,2);
-rect(k-4,t+20,2,6);
-rect(k-2,t+26,2,2);
-rect(k,t+18,4,2);
-rect(k+2,t+30,2,2);
-rect(k-2,t+32,4,2);
-rect(k+2,t+24,2,2);
-rect(k-2,t+34,2,2);
-rect(k-4,t+36,2,2);
-rect(k-6,t+28,2,16);
-rect(k-8,t+22,2,6);
-rect(k-14,t+20,6,2);
-rect(k-20,t+28,6,2);
-rect(k-22,t+20,2,2);
-rect(k-24,t+22,2,4);
-rect(k-26,t+26,2,12);
-rect(k-8,t+22,2,6);
-rect(k-24,t+38,2,2);
-rect(k-26,t+40,16,2);
-rect(k-12,t+38,2,2);
-rect(k-10,t+28,2,10);
-rect(k-12,t+21,2,8);
-rect(k-8,t+42,2,4);
-rect(k-12,t+44,4,2);
-rect(k-24,t+46,14,2);
-rect(k-26,t+42,2,4);
-rect(k-26,t+50,12,2);
-rect(k-16,t+48,2,2);
-rect(k-26,t+48,2,2);
-rect(k-12,t+48,2,2);
-rect(k-12,t+50,14,2);
-rect(k,t+48,2,2);
-rect(k-2,t+46,2,2);
-rect(k-4,t+44,2,2);
-fill(255, 255, 255);
-rect(k-2,t+48,2,2);
-rect(k-24,t+48,2,2);
-rect(k-24,t+42,12,4);
-rect(k-12,t+40,2,4);
-rect(k-10,t+38,2,6);
-rect(k-8,t+28,2,14);
-rect(k-10,t+22,2,6);
-rect(k+2,t+6,-6,2);
-rect(k-4,t+2,4,14);
-rect(k-2,t+16,2,2);
-rect(k,t+14,2,2);
-fill(10, 75, 0);
-rect(k-14,t+20,-6,20);
-rect(k-22,t+22,10,18);
-rect(k-24,t+26,2,12);
-rect(k-12,t+28,2,10);
-fill(255, 179, 0);
-rect(k-10,t+10,2,8);
-rect(k-8,t+8,2,14);
-rect(k-6,t+12,2,16);
-rect(k-4,t+16,2,4);
-rect(k-4,t+26,2,10);
-rect(k-2,t+28,2,4);
-rect(k-2,t+18,2,2);
-rect(k,t+30,2,2);
-rect(k,t+18,2,4);
-rect(k+2,t+16,2,8);
-rect(k-10,t+48,8,2);
-rect(k-10,t+46,8,2);
-rect(k-6,t+44,2,2);
-rect(k-22,t+48,6,2);
-fill(255, 255, 255);
-rect(k-22,t+16,2,8);
-rect(k-28,t+16,8,2);
-rect(k-24,t+16,2,6);
-rect(k-26,t+16,2,4);</p>
-
-<p>if (keyIsPressed &amp;&amp; keyCode === LEFT) {
-        g = g + 3;
-        sun = sun + 0.1;
-        cloud = cloud + 0.5;
-        k = k + 3;
-        h = h + 3;
-        s = s + 3;
-        c = c + 3;
-        p = p + 3;
-        bow = bow + 3;
-        portal = portal + 3;
-        portal2 = portal2 + 3;
-        hammery = hammery + 3;
-    } else {
-        g = g;
+<p>//if IE4/NS6, apply style
+if (document.all||document.getElementById){
+document.write('.tictac{&amp;#39;)
+document.write(&amp;#39;width:50px;height:50px;&amp;#39;)
+document.write(&amp;#39;}')
 }</p>
 
-<p>if (keyIsPressed &amp;&amp; keyCode === RIGHT) {
-        g = g - 3;
-        sun = sun - 0.1;
-        cloud = cloud -0.5;
-        k = k - 3;
-        h = h - 3;
-        s = s - 3;
-        c = c - 3;
-        p = p - 3;
-        bow = bow - 3;
-        portal = portal - 3;
-        portal2 = portal2 - 3;
-        hammery = hammery - 3;</p>
+<p>var sqr1
+var sqr2
+var sqr3
+var sqr4
+var sqr5
+var sqr6
+var sqr7
+var sqr8
+var sqr9
+var sqr1T = 0
+var sqr2T = 0
+var sqr3T = 0
+var sqr4T = 0
+var sqr5T = 0
+var sqr6T = 0
+var sqr7T = 0
+var sqr8T = 0
+var sqr9T = 0
+var moveCount = 0
+var turn = 0
+var mode = 1</p>
 
-<pre><code>} else {
-    g = g;
-</code></pre>
-
-<p>}</p>
-
-<p>if (keyReleased &amp;&amp; keyCode === UP) {
-        fireball = fireball + 10;
-    } else {
-        fireball = -30;
+<p>function vari()
+{
+sqr1 = document.tic.sqr1.value
+sqr2 = document.tic.sqr2.value
+sqr3 = document.tic.sqr3.value
+sqr4 = document.tic.sqr4.value
+sqr5 = document.tic.sqr5.value
+sqr6 = document.tic.sqr6.value
+sqr7 = document.tic.sqr7.value
+sqr8 = document.tic.sqr8.value
+sqr9 = document.tic.sqr9.value
+}
+function check()
+{
+  if(sqr1 == " X " &amp;&amp; sqr2 == " X " &amp;&amp; sqr3 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  } 
+  else if(sqr4 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr6 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  } 
+  else if(sqr7 == " X " &amp;&amp; sqr8 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr4 == " X " &amp;&amp; sqr7 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr2 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr8 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr6 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr7 == " X ")
+  {
+    alert("You Win!")
+    reset()
+  }
+  else
+  {
+    winCheck()
+    check2()
+    drawCheck()<br>
+  } 
 }</p>
 
-<p>if ( fireball &gt; 150) {
-    fireball = -20;</p>
-
-<p>}</p>
-
-<p>if (fireball &gt; g - 200 ) {
-    a = 400 ;
+<p>function check2()
+{
+  vari()
+  drawCheck()
+  if(sqr1 == " O " &amp;&amp; sqr2 == " O " &amp;&amp; sqr3 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  } 
+  else if(sqr4 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr6 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  } 
+  else if(sqr7 == " O " &amp;&amp; sqr8 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr4 == " O " &amp;&amp; sqr7 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr2 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr8 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr6 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr7 == " O ")
+  {
+    alert("You Lose!")
+    reset()
+  }
 }</p>
 
-<p>if (g &lt; m + 60 &amp; a === 300) {
-    o  = 500; 
+<p>function player1Check()
+{
+  if(sqr1 == " X " &amp;&amp; sqr2 == " X " &amp;&amp; sqr3 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  } 
+  else if(sqr4 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr6 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  } 
+  else if(sqr7 == " X " &amp;&amp; sqr8 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr4 == " X " &amp;&amp; sqr7 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr2 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr8 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr6 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr7 == " X ")
+  {
+    alert("Player 1 wins!")
+    reset()
+  }
+  else
+  {
+    player2Check()
+    drawCheck()<br>
+  } 
 }</p>
 
-<p>g=g-0.1;</p>
-
-<p>t = t + kts;</p>
-
-<p>if ( t &lt; 140) {
-    kts = +5; 
+<p>function player2Check()
+{
+  vari()
+  drawCheck()
+  if(sqr1 == " O " &amp;&amp; sqr2 == " O " &amp;&amp; sqr3 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  } 
+  else if(sqr4 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr6 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  } 
+  else if(sqr7 == " O " &amp;&amp; sqr8 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr4 == " O " &amp;&amp; sqr7 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr2 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr8 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr6 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr7 == " O ")
+  {
+    alert("Player 2 wins!")
+    reset()
+  }
 }</p>
 
-<p>if ( t &gt; 323) {
-    kts = -5; 
+<p>function drawCheck()
+{
+  vari()
+  moveCount = sqr1T + sqr2T + sqr3T + sqr4T + sqr5T + sqr6T + sqr7T + sqr8T + sqr9T 
+  if(moveCount == 9)
+  {
+    reset()
+    alert("Draw") 
+  }
 }</p>
 
-<p>fill(0, 0, 0);
-textSize(15);
-text("and minions ",k-165,192);
-text("like",k-139,206);
-text("koopa troopa!!",k-172,218);
-textSize(10);
-text("except he's facing bakwards...",k-186,237);</p>
-
-<p>if (fireball &gt; k-170  &amp; fireball &lt; t +-103) {
-   t = 20000;
+<p>function winCheck()
+{
+  check2()
+  if(sqr1 == " O " &amp;&amp; sqr2 == " O " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " O " &amp;&amp; sqr3 == " O " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr6T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr6.value = " O "
+    sqr6T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " O " &amp;&amp; sqr6 == " O " &amp;&amp; sqr4T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr4.value = " O "
+    sqr4T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " O " &amp;&amp; sqr8 == " O " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr8 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr3 == " O " &amp;&amp; sqr2T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr2.value = " O "
+    sqr2T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " O " &amp;&amp; sqr6 == " O " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr8T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr8.value = " O "
+    sqr8T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr7 == " O " &amp;&amp; sqr4T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr4.value = " O "
+    sqr4T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " O " &amp;&amp; sqr8 == " O " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr6T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr6.value = " O "
+    sqr6T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " O " &amp;&amp; sqr7 == " O " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " O " &amp;&amp; sqr8 == " O " &amp;&amp; sqr2T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr2.value = " O "
+    sqr2T = 1;
+    turn = 0;
+  }
+  else if(sqr6 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr4 == " O " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " O " &amp;&amp; sqr5 == " O " &amp;&amp; sqr8T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr8.value = " O "
+    sqr8T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr6 == " O " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " O " &amp;&amp; sqr9 == " O " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " O " &amp;&amp; sqr7 == " O " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else
+  {
+    computer()
+  }
+  check2()
+}
+function computer()
+{
+  check2()
+  if(sqr1 == " X " &amp;&amp; sqr2 == " X " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " X " &amp;&amp; sqr3 == " X " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr6T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr6.value = " O "
+    sqr6T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " X " &amp;&amp; sqr6 == " X " &amp;&amp; sqr4T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr4.value = " O "
+    sqr4T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " X " &amp;&amp; sqr8 == " X " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr8 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr3 == " X " &amp;&amp; sqr2T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr2.value = " O "
+    sqr2T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " X " &amp;&amp; sqr6 == " X " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr7 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr8T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr8.value = " O "
+    sqr8T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr7 == " X " &amp;&amp; sqr4T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr4.value = " O "
+    sqr4T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " X " &amp;&amp; sqr8 == " X " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr6T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr6.value = " O "
+    sqr6T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr4 == " X " &amp;&amp; sqr7 == " X " &amp;&amp; sqr1T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    sqr1T = 1;
+    turn = 0;
+  }
+  else if(sqr5 == " X " &amp;&amp; sqr8 == " X " &amp;&amp; sqr2T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr2.value = " O "
+    sqr2T = 1;
+    turn = 0;
+  }
+  else if(sqr6 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr3T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    sqr3T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr4 == " X " &amp;&amp; sqr7T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    sqr7T = 1;
+    turn = 0;
+  }
+  else if(sqr2 == " X " &amp;&amp; sqr5 == " X " &amp;&amp; sqr8T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr8.value = " O "
+    sqr8T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr6 == " X " &amp;&amp; sqr9T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    sqr9T = 1;
+    turn = 0;
+  }
+  else if(sqr1 == " X " &amp;&amp; sqr9 == " X " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else if(sqr3 == " X " &amp;&amp; sqr7 == " X " &amp;&amp; sqr5T == 0 &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    sqr5T = 1;
+    turn = 0;
+  }
+  else
+  {
+    AI()
+  }
+  check2()
 }</p>
 
-<p>if (k &lt; m + 60 &amp; k &gt; m - 60 &amp; t &lt; 400) {
-    o  = 500; 
+<p>function AI()
+{
+  vari()
+  if(document.tic.sqr5.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr5.value = " O "
+    turn = 0
+    sqr5T = 1
+  }
+  else if(document.tic.sqr1.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr1.value = " O "
+    turn = 0
+    sqr1T = 1
+  }
+  else if(document.tic.sqr9.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr9.value = " O "
+    turn = 0
+    sqr9T = 1
+  }
+  else if(document.tic.sqr6.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr6.value = " O "
+    turn = 0
+    sqr6T = 1
+  }
+  else if(document.tic.sqr2.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr2.value = " O "
+    turn = 0
+    sqr2T = 1
+  }
+  else if(document.tic.sqr8.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr8.value = " O "
+    turn = 0
+    sqr8T = 1
+  }
+  else if(document.tic.sqr3.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr3.value = " O "
+    turn = 0
+    sqr3T = 1
+  }
+  else if(document.tic.sqr7.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr7.value = " O "
+    turn = 0
+    sqr7T = 1
+  }
+  else if(document.tic.sqr4.value == "     " &amp;&amp; turn == 1)
+  {
+    document.tic.sqr4.value = " O "
+    turn = 0
+    sqr4T = 1
+  }
+  check2()
 }</p>
 
-<p>//Hammer Bro</p>
-
-<p>fill(255, 245, 178);
-rect(hammery+100,hammerx+205,20,50);
-fill(0, 0, 0);
-rect(hammery+100,hammerx+255,20,5);
-rect(hammery+100,hammerx+200,20,5);
-rect(hammery+85,310,50,25);
-rect(hammery+100,hammerx+200,5,55);
-rect(hammery+115,hammerx+200,5,55);</p>
-
-<p>fill(0, 0, 0);
-rect(h,b,15,5);
-rect(h+5,b-5,5,15);
-rect(h,b-15,20,5);
-rect(h-5,b-25,5,10);
-rect(h,b-30,20,5);
-rect(h+10,b-35,30,5);
-rect(h+35,b-30,10,5);
-rect(h+45,b-25,5,5);
-rect(h+20,b-10,10,5);
-rect(h+30,b-5,10,10);
-rect(h+20,b-5,5,10);
-rect(h+25,b+5,5,5);
-rect(h+30,b+10,15,5);
-rect(h+40,b+5,20,5);
-rect(h+50,b-5,5,10);
-rect(h+45,b-15,5,15);
-rect(h+40,b-20,5,15);
-rect(h+35,b-20,5,10);
-rect(h+30,b-20,5,5);
-rect(h+20,b-25,15,5);
-rect(h+-5,b+5,5,15);
-rect(h,b+20,30,5);
-rect(h+25,b+15,10,5);
-rect(h+25,b+15,5,15);
-rect(h+30,b+30,5,10);
-rect(h+20,b-25,15,5);
-rect(h+60,b+10,10,5);
-rect(h+65,b+20,5,5);
-rect(h+70,b+15,5,5);
-rect(h+60,b+25,5,5);
-rect(h+55,b+30,5,5);
-rect(h+35,b+35,20,5);
-rect(h+35,b+40,5,20);
-rect(h+30,b+55,15,5);
-rect(h+15,b+25,5,5);
-rect(h+10,b+30,5,25);
-rect(h+15,b+55,5,10);
-rect(h+20,b+60,5,10);
-rect(h+25,b+60,5,5);
-rect(h+45,b+60,5,5);
-rect(h+10,b+65,5,5);
-rect(h+5,b+70,5,5);
-rect(h,b+75,5,5);
-rect(h+5,b+80,15,5);
-rect(h+15,b+70,5,10);
-rect(h+50,b+65,5,5);
-rect(h+55,b+70,5,5);
-rect(h+15,b+75,45,5);
-rect(h+55,b-15,5,10);
-rect(h+60,b-20,5,5);
-rect(h+65,b-25,10,5);
-rect(h+65,b-25,20,5);
-rect(h+55,b-30,10,5);
-rect(h+45,b-35,10,5);
-rect(h+45,b-40,5,10);
-rect(h+50,b-50,5,16);
-rect(h+55,b-60,15,30);
-rect(h+60,b-60,5,30);
-rect(h+65,b-55,15,30);
-rect(h+80,b-50,5,30);
-rect(h+85,b-45,10,25);
-rect(h+95,b-40,10,20);
-rect(h+105,b-35,10,10);
-rect(h+105,b-25,5,10);
-rect(h+95,b-15,10,10);
-rect(h+75,b-20,30,5);
-rect(h+80,b-15,15,5);
-rect(h+75,b-10,5,10);
-rect(h+70,b,5,10);
-rect(h+80,b-60,10,5);
-rect(h+85,b-55,15,5);
-rect(h+95,b-50,5,5);
-rect(h+50,b+65,20,5);
-rect(h+55,b+30,20,20);
-rect(h+60,b+50,15,5);
-rect(h+65,b+55,5,10);
-rect(h+75,b+24,5,25);
-rect(h+70,b+20,5,5);
-rect(h+70,b+25,5,5);
-rect(h,b+25,10,5);
-rect(h-5,b+30,5,10);
-rect(h+-5,b+35,10,5);
-rect(h,b+40,10,5);
-fill(255, 243, 184);
-rect(h+10,b-5,5,15);
-rect(h,b-25,20,10);
-rect(h+45,b-0,5,5);
-rect(h+20,b-20,10,10);
-rect(h+30,b-15,5,10);
-rect(h+5,b-10,10,5);
-rect(h+35,b-10,5,5);
-rect(h+40,b-5,5,10);
-rect(h+25,b-5,5,10);
-rect(h+30,b+5,10,5);
-rect(h+20,b-30,15,5);
-rect(h+35,b-25,10,5);
-rect(h+45,b-20,5,5);
-rect(h+40,b+40,15,15);
-rect(h+65,b+55,-15,10);
-rect(h+45,b+50,15,10);
-rect(h+70,b+30,5,10);
-rect(h+66,b+25,5,5);
-rect(h+5,b+75,10,5);
-rect(h+20,b+70,10,5);
-rect(h+60,b+-15,10,25);
-rect(h+55,b-5,15,10);
-rect(h+65,b-20,10,20);
-rect(h+70,b-15,10,5);
-rect(h+85,b-50,10,5);
-rect(h+80,b-55,5,5);
-fill(240, 181, 62);
-rect(h+15,b-10,5,30);
-rect(h+20,b+5,5,15);
-rect(h+25,b+10,5,5);
-rect(h,b+5,5,15);
-rect(h+5,b+10,10,10);
-rect(h,b+30,5,5);
-rect(h+5,b+30,5,10);
-fill(232, 157, 7);
-rect(h+15,b+30,5,25);
-rect(h+20,b+25,5,35);
-rect(h+25,b+30,5,30);
-rect(h+30,b+41,5,15);
-fill(240, 181, 62);
-rect(h+35,b+30,20,5);
-rect(h+30,b+25,30,5);
-rect(h+30,b+20,35,5);
-rect(h+35,b+15,35,5);
-rect(h+45,b+10,15,5);
-rect(h+10,b+70,5,5);
-rect(h+15,b+65,5,5);
-rect(h+30,b+70,25,5);
-rect(h+25,b+65,25,5);
-rect(h+31,b+60,15,5);</p>
-
-<p>hammery = hammery -7;</p>
-
-<p>if (hammery &lt; h-258) {
-    hammery = h-65;
+<p>function reset()
+{
+  document.tic.sqr1.value = "     "
+  document.tic.sqr2.value = "     "
+  document.tic.sqr3.value = "     "
+  document.tic.sqr4.value = "     "
+  document.tic.sqr5.value = "     "
+  document.tic.sqr6.value = "     "
+  document.tic.sqr7.value = "     "
+  document.tic.sqr8.value = "     "
+  document.tic.sqr9.value = "     "
+  sqr1T = 0
+  sqr2T = 0
+  sqr3T = 0
+  sqr4T = 0
+  sqr5T = 0
+  sqr6T = 0
+  sqr7T = 0
+  sqr8T = 0
+  sqr9T = 0
+  vari()
+  turn = 0
+  moveCount = 0
 }</p>
 
-<p>fill(0, 0, 0);
-textSize(10);
-text("But you'll never defeat",h-182,174);
-text("except that one of the bros are missing",h-218,210);
-textSize(20);
-text("THE HAMMER BROS!!!",h-240, 196);</p>
+<p>function resetter()
+{
+  reset()
+}
+</p>
 
-<p>if (fireball &gt; h - 200 ) {
-    b = 500 ;
-   hammery = 5000;
-    hammerx = 5000;
-}</p>
+<p></p>
 
-<p>if (hammery &gt; 4000) {
-    hammery = 5000;
-}</p>
 
-<p>if (hammerx &gt; 4000) {
-    hammerx = 5000;
-}</p>
+<br>
 
-<p>if (hammery &lt; m-50) {
-    o = 500;
-}</p>
 
-<p>fill(0, 0, 0);
-textSize(26);
-text("OK Bowser you REALLY need to get a better army",s,100);</p>
+<br>
 
-<p>if ( o &gt; 450 ) {
-    background(0, 0, 0);
-    o = 500;
-    fill(0, 166, 6);
-    textSize(70);
-    text("YOU LOSE",15,115);
-    text("HAHA!!!",75,200);
-}</p>
 
-<p>fill(25, 9, 161);
-ellipse(portal+5,310,70,135);
-fill(0, 13, 255);
-ellipse(portal+5,310,60,125);
-fill(51, 109, 255);
-ellipse(portal+5,310,50,115);</p>
 
-<p>if (m &gt; portal) {
-    background(0, 0, 0);</p>
-
-<p>fill(69, 0, 0);
-rect(0,300,400,100);
-fill(117, 0, 0);
-rect(0,353,400,35);
-fill(33, 33, 33);
-rect(25,0,50,300);
-rect(125,0,50,300);
-rect(225,0,50,300);
-rect(325,0,50,300);
-fill(23, 23, 23);
-rect(20,250,60,50);
-rect(120,250,60,50);
-rect(220,250,60,50);
-rect(320,250,60,50);</p>
-
-<pre><code>//FireBall
-</code></pre>
-
-<p>fill(255, 0, 0);
-rect(fireball+160,340,5,5);
-rect(fireball+165,335,5,5);
-rect(fireball+170,335,5,5);
-rect(fireball+160,rect,5,5);
-rect(fireball+175,340,5,5);
-rect(fireball+160,345,5,5);
-rect(fireball+175,345,5,5);
-rect(fireball+165,350,5,5);
-rect(fireball+170,350,5,5);
-fill(255, 111, 0);
-rect(fireball+165,340,10,10);
-fill(255, 60, 0);
-rect(fireball+170,340,5,10);
-fill(255, 183, 0);
-rect(fireball+160,350,5,5);
-rect(fireball+160,335,5,5);
-rect(fireball+155,340,5,10);
-fill(255, 234, 0);
-rect(fireball+155,350,5,5);
-rect(fireball+150,340,5,10);
-rect(fireball+155,335,5,5);</p>
-
-<p>//Mario
-fill(255, 0, 0);
-rect(m,o,30,3);
-rect(m,o-3,21,3);
-rect(m+3,o-6,18,3);
-rect(m+9,o-9,12,3);
-fill(255, 221, 0);
-rect(m+15,o-3,6,3);
-rect(m+18,o-6,3,3);
-rect(m+21,o+3,-21,24);
-rect(m+21,o+6,9,3);
-rect(m+21,o+9,12,3);
-rect(m+21,o+12,12,3);
-rect(m+21,o+15,12,3);
-rect(m+9,o+24,15,3);
-rect(m+12,o+27,9,3);
-fill(110, 62, 0);
-rect(m+12,o+18,15,3);
-rect(m+15,o+21,12,3);
-rect(m+18,o+15,3,3);
-rect(m+12,o+3,3,6);
-rect(m+15,o+6,3,3);
-rect(m+3,o+3,3,6);
-rect(m+3,o+9,6,6);
-rect(m,o+3,6,3);
-rect(m-3,o+6,3,18);
-rect(m+-6,o+15,3,6);
-rect(m,o+24,3,3);
-fill(255, 0, 0);
-rect(m+3,o+27,9,3);
-rect(m+3,o+30,21,30);
-rect(m,o+30,6,25);
-rect(m+21,o+33,6,18);
-fill(110, 62, 0);
-rect(m+7,o+30,9,24);
-rect(m,o+30,3,9);
-rect(m+3,o+27,3,3);
-rect(m+3,o+30,3,3);
-rect(m+18,o+30,3,3);
-rect(m+18,o+33,6,3);
-rect(m+21,o+36,3,9);
-rect(m+18,o+36,3,8);
-fill(255, 213, 0);
-rect(m+24,o+42,3,3);
-rect(m+18,o+42,3,3);
-rect(m+7,o+48,9,9);
-fill(110, 62, 0);
-rect(m+8,o+60,12,12);
-rect(m+12,o+66,15,6);
-fill(255, 0, 0);
-rect(m+13,o+30,3,3);</p>
-
-<pre><code>fill(25, 9, 161);
-</code></pre>
-
-<p>ellipse(portal+5,310,70,135);
-fill(0, 13, 255);
-ellipse(portal+5,310,60,125);
-fill(51, 109, 255);
-ellipse(portal+5,310,50,115);</p>
-
-<p>//Bowser</p>
-
-<p>fill(0, 0, 0);
-rect(bow+240,ser-25,5,10);
-rect(bow+245,ser-35,5,15);
-rect(bow+240,ser-35,5,5);
-rect(bow+235,ser-15,5,5);
-rect(bow+230,ser-20,5,5);
-rect(bow+225,ser-40,5,20);
-rect(bow+230,ser-40,5,5);
-rect(bow+225,ser-10,10,5);
-rect(bow+215,ser-15,10,5);
-rect(bow+210,ser-10,5,5);
-rect(bow+205,ser-5,5,20);
-rect(bow+210,ser+10,5,15);
-rect(bow+215,ser+15,5,25);
-rect(bow+220,ser+20,5,15);
-rect(bow+225,ser+25,25,5);
-rect(bow+250,ser+20,5,5);
-rect(bow+240,ser+15,10,5);
-rect(bow+225,ser+10,30,5);
-rect(bow+255,ser+5,10,5);
-rect(bow+255,ser,5,5);
-rect(bow+265,ser-5,5,10);
-rect(bow+220,ser+5,5,5);
-rect(bow+235,ser+5,10,5);
-rect(bow+270,ser-20,5,15);
-rect(bow+265,ser-25,5,5);
-rect(bow+250,ser-30,15,5);
-rect(bow+260,ser-20,5,5);
-rect(bow+250,ser-40,5,5);
-rect(bow+240,ser-45,10,5);
-rect(bow+235,ser-50,5,5);
-rect(bow+220,ser-55,15,5);
-rect(bow+210,ser-50,15,5);
-rect(bow+215,ser-45,5,5);
-rect(bow+210,ser-40,5,5);
-rect(bow+200,ser-55,10,5);
-rect(bow+210,ser-40,5,5);
-rect(bow+195,ser-60,5,5);
-rect(bow+190,ser-65,5,5);
-rect(bow+185,ser-70,5,5);
-rect(bow+215,ser-60,5,5);
-rect(bow+210,ser-65,5,5);
-rect(bow+205,ser-70,5,5);
-rect(bow+200,ser-65,5,5);
-rect(bow+175,ser-50,15,5);
-rect(bow+180,ser-65,5,15);
-rect(bow+185,ser-45,5,5);
-rect(bow+190,ser-40,5,5);
-rect(bow+195,ser-35,15,5);
-rect(bow+190,ser-30,5,10);
-rect(bow+185,ser-20,5,30);
-rect(bow+190,ser+5,5,5);
-rect(bow+195,ser+10,10,5);
-rect(bow+165,ser-55,10,5);
-rect(bow+160,ser-50,5,5);
-rect(bow+165,ser-45,5,5);
-rect(bow+170,ser-40,5,5);
-rect(bow+160,ser-35,10,5);
-rect(bow+155,ser-30,5,5);
-rect(bow+150,ser-25,5,10);
-rect(bow+155,ser-15,5,10);
-rect(bow+160,ser-20,5,10);
-rect(bow+150,ser-5,5,10);
-rect(bow+155,ser+5,5,10);
-rect(bow+160,ser,5,5);
-rect(bow+165,ser+5,15,5);
-rect(bow+180,ser,5,10);
-rect(bow+210,ser+40,5,10);
-rect(bow+205,ser+50,5,5);
-rect(bow+200,ser+55,5,10);
-rect(bow+195,ser+65,5,15);
-rect(bow+190,ser+80,30,5);
-rect(bow+190,ser+85,5,5);
-rect(bow+185,ser+90,5,5);
-rect(bow+175,ser+95,10,5);
-rect(bow+210,ser+70,5,10);
-rect(bow+215,ser+60,5,10);
-rect(bow+220,ser+55,5,5);
-rect(bow+225,ser+35,5,20);
-rect(bow+215,ser+85,20,5);
-rect(bow+235,ser+90,20,5);
-rect(bow+255,ser+80,5,10);
-rect(bow+260,ser+80,5,5);
-rect(bow+265,ser+75,5,5);
-rect(bow+260,ser+70,5,5);
-rect(bow+255,ser+60,5,10);
-rect(bow+260,ser+55,5,5);
-rect(bow+245,ser+50,15,5);
-rect(bow+230,ser+55,15,5);
-rect(bow+200,ser+85,5,5);
-rect(bow+205,ser+90,10,5);
-rect(bow+215,ser+95,5,20);
-rect(bow+210,ser+110,5,5);
-rect(bow+220,ser+115,10,5);
-rect(bow+230,ser+120,5,5);
-rect(bow+235,ser+125,5,5);
-rect(bow+170,ser+100,5,30);
-rect(bow+175,ser+130,60,5);
-rect(bow+175,ser+105,5,10);
-rect(bow+165,ser+110,5,5);
-rect(bow+150,ser+115,15,5);
-rect(bow+115,ser+120,35,5);
-rect(bow+110,ser+115,5,5);
-rect(bow+115,ser+110,10,5);
-rect(bow+125,ser+105,15,5);
-rect(bow+140,ser+100,30,5);
-rect(bow+135,ser+95,10,5);
-rect(bow+130,ser+90,10,5);
-rect(bow+135,ser+85,5,5);
-rect(bow+125,ser+95,5,10);
-rect(bow+120,ser+100,5,5);
-rect(bow+115,ser+105,5,5);
-rect(bow+140,ser+80,5,5);
-rect(bow+135,ser+75,5,5);
-rect(bow+130,ser+65,5,10);
-rect(bow+125,ser+60,5,5);
-rect(bow+130,ser+45,5,15);
-rect(bow+125,ser+40,5,5);
-rect(bow+130,ser+35,5,5);
-rect(bow+135,ser+10,5,25);
-rect(bow+140,ser+10,20,5);
-rect(bow+145,ser+85,15,5);
-rect(bow+160,ser+80,10,5);
-rect(bow+170,ser+75,10,5);
-rect(bow+175,ser+70,10,5);
-rect(bow+180,ser+60,5,10);
-rect(bow+185,ser+45,5,20);
-rect(bow+190,ser+40,5,10);
-rect(bow+195,ser+35,5,5);
-rect(bow+195,ser+25,5,10);
-rect(bow+170,ser+10,5,5);
-rect(bow+175,ser+15,10,5);
-rect(bow+185,ser+20,15,5);
-fill(255, 255, 255);
-rect(bow+235,ser-20,5,5);
-rect(bow+230,ser-25,10,5);
-rect(bow+230,ser-30,15,5);
-rect(bow+230,ser-35,10,5);
-rect(bow+245,ser-40,5,5);
-rect(bow+235,ser-45,5,5);
-rect(bow+225,ser-50,10,5);
-rect(bow+205,ser-65,5,5);
-rect(bow+210,ser-60,5,5);
-rect(bow+195,ser-50,15,15);
-rect(bow+190,ser-45,25,5);
-rect(bow+185,ser-65,5,15);
-rect(bow+190,ser-60,5,15);
-rect(bow+195,ser-55,5,5);
-rect(bow+140,ser+15,10,15);
-rect(bow+150,ser+15,5,10);
-rect(bow+260,ser-5,5,10);
-rect(bow+225,ser+5,10,5);
-rect(bow+245,ser,10,10);
-rect(bow+170,ser-50,5,10);
-rect(bow+165,ser-50,5,5);
-rect(bow+155,ser-25,5,10);
-rect(bow+170,ser-35,10,5);
-rect(bow+180,ser-40,5,5);
-rect(bow+165,ser-30,5,5);
-rect(bow+165,ser-20,15,5);
-rect(bow+165,ser-15,5,10);
-rect(bow+160,ser-10,5,5);
-rect(bow+155,ser-5,5,5);
-rect(bow+180,ser-5,5,5);
-rect(bow+175,ser,5,5);
-rect(bow+160,ser+5,5,10);
-rect(bow+165,ser+10,5,5);
-rect(bow+165,ser+30,15,10);
-rect(bow+165,ser+40,10,5);
-rect(bow+145,ser+55,15,10);
-rect(bow+145,ser+65,10,5);
-rect(bow+170,ser+55,5,10);
-rect(bow+175,ser+55,5,5);
-rect(bow+130,ser+60,5,5);
-rect(bow+130,ser+40,10,5);
-rect(bow+135,ser+35,5,5);
-rect(bow+175,ser+10,20,5);
-rect(bow+185,ser+15,25,5);
-rect(bow+200,ser+20,10,5);
-rect(bow+200,ser+25,15,15);
-rect(bow+195,ser+40,15,10);
-rect(bow+190,ser+50,15,5);
-rect(bow+190,ser+55,10,10);
-rect(bow+185,ser+65,10,15);
-rect(bow+180,ser+75,10,15);
-rect(bow+170,ser+80,15,15);
-rect(bow+160,ser+85,15,15);
-rect(bow+145,ser+90,15,10);
-rect(bow+140,ser+85,5,10);
-rect(bow+130,ser+100,10,5);
-rect(bow+130,ser+95,5,5);
-rect(bow+120,ser+105,5,5);
-rect(bow+255,ser+55,5,5);
-rect(bow+260,ser+75,5,5);
-rect(bow+250,ser+85,5,5);
-rect(bow+220,ser+125,15,5);
-rect(bow+220,ser+120,10,5);
-rect(bow+210,ser+55,5,5);
-rect(bow+220,ser+40,5,5);
-rect(bow+205,ser+70,5,5);
-fill(135, 135, 135);
-rect(bow+220,ser+35,5,5);
-rect(bow+215,ser+45,10,10);
-rect(bow+215,ser+40,5,5);
-rect(bow+210,ser+50,5,5);
-rect(bow+215,ser+55,5,5);
-rect(bow+205,ser+55,5,15);
-rect(bow+210,ser+60,5,11);
-rect(bow+200,ser+65,5,15);
-rect(bow+205,ser+75,5,5);
-fill(0, 191, 41);
-rect(bow+155,ser+15,20,15);
-rect(bow+175,ser+20,10,10);
-rect(bow+185,ser+25,10,15);
-rect(bow+180,ser+30,10,15);
-rect(bow+150,ser+25,5,30);
-rect(bow+140,ser+30,25,25);
-rect(bow+135,ser+45,5,30);
-rect(bow+140,ser+55,5,25);
-rect(bow+175,ser+40,10,15);
-rect(bow+165,ser+45,10,10);
-rect(bow+145,ser+70,15,15);
-rect(bow+160,ser+55,10,25);
-rect(bow+155,ser+65,25,5);
-rect(bow+180,ser+55,5,5);
-rect(bow+175,ser+60,5,5);
-rect(bow+170,ser+70,5,5);
-rect(bow+190,ser-20,5,25);
-rect(bow+195,ser-30,10,40);
-rect(bow+215,ser+-40,5,25);
-rect(bow+220,ser+-45,5,30);
-rect(bow+205,ser+-30,5,25);
-rect(bow+210,ser+-35,5,25);
-rect(bow+225,ser+-20,5,10);
-rect(bow+230,ser+-15,5,5);
-rect(bow+225,ser+-45,10,5);
-rect(bow+235,ser+-40,10,5);
-fill(255, 187, 0);
-rect(bow+225,ser+20,25,5);
-rect(bow+220,ser+15,20,5);
-rect(bow+215,ser+10,10,5);
-rect(bow+210,ser-5,10,15);
-rect(bow+215,ser-10,10,15);
-rect(bow+225,ser-5,20,10);
-rect(bow+245,ser-20,15,20);
-rect(bow+235,ser-10,35,5);
-rect(bow+240,ser-15,30,5);
-rect(bow+250,ser-25,15,5);
-rect(bow+265,ser-20,5,5);
-rect(bow+235,ser+85,15,5);
-rect(bow+220,ser+80,35,5);
-rect(bow+215,ser+75,45,5);
-rect(bow+215,ser+70,45,5);
-rect(bow+220,ser+65,35,5);
-rect(bow+225,ser+55,5,5);
-rect(bow+220,ser+60,35,5);
-rect(bow+245,ser+55,10,5);
-rect(bow+175,ser+115,45,15);
-rect(bow+180,ser+110,30,5);
-rect(bow+180,ser+105,35,5);
-rect(bow+175,ser+100,40,5);
-rect(bow+185,ser+95,30,5);
-rect(bow+190,ser+90,15,5);
-rect(bow+195,ser+85,5,5);
-rect(bow+115,ser+115,35,5);
-rect(bow+125,ser+110,40,5);
-rect(bow+140,ser+105,30,5);
-rect(bow+200,ser-60,10,5);
-rect(bow+210,ser-55,10,5);
-fill(255, 102, 0);
-rect(bow+155,ser,5,5);
-rect(bow+165,ser,10,5);
-rect(bow+160,ser-5,20,5);
-rect(bow+170,ser-15,15,10);
-rect(bow+180,ser-20,5,5);
-rect(bow+160,ser-30,5,10);
-rect(bow+165,ser-25,25,5);
-rect(bow+170,ser-30,20,5);
-rect(bow+180,ser-35,15,5);
-rect(bow+175,ser-40,5,5);
-rect(bow+175,ser-45,10,5);
-rect(bow+185,ser-40,5,5);</p>
-
-<p>fill(138, 138, 138);
-rect(c+40,e+135,290,10);
-rect(c+40,e+-80,285,10);
-rect(c+40,e-80,10,220);
-rect(c+320,e-80,10,220);
-rect(c+180,e-80,10,220);
-rect(c+110,e-80,10,220);
-rect(c+250,e-80,10,220);
-rect(c+160,e-130,50,50);
-fill(0, 0, 0);
-rect(c+170,e-100,30,20);
-fill(138, 138, 138);
-rect(c+180,e-140,10,50);</p>
-
-<p>fill(255, 255, 255);
-text(" What's This! Bowser's Trapped in a cage",c-50,e+173);</p>
-
-<p>bow = bow + bowser;</p>
-
-<p>if ( bow &gt; c+60) {
-    bowser = bowser-5;
-}</p>
-
-<p>if ( bow &lt; c-70) {
-    bowser = bowser+5;
-}</p>
-
-<p>textSize(10);
-text(" Of Course!",c+650,e-71);
-text(" Only                is",c+638,e-57);
-text(" Lame enough to",c+639,e+-43);
-text(" have such a terrible",c+630,e-30);
-text(" Army",c+661,e-17);
-fill(255, 255, 0);
-text("Pacman",c+665,e-57);</p>
-
-<p>arc(p, w+50, 75, 75, pac, 180);</p>
-
-<p>pac = pac + pacs;</p>
-
-<p>if ( pac &gt; -106) {
-    pacs = -5;
-}</p>
-
-<p>if ( pac &lt; -180) {
-    pacs = 5;
-}</p>
-
-<p>if ( m &gt; c+520 ) {
-    w=w+2;
-}</p>
-
-<p>if ( w &gt; 285) {
-    w=285;
-    p=p-5;
-}</p>
-
-<p>if ( fireball &gt; p-201) {
-    p = 200000;
-    pac =200000;
-    pacs = 200000;
-    w = 200000;
-}</p>
-
-<p>if ( p &lt; m+90 ) {
-    o = 500;
-}</p>
-
-<p>fill(255, 255, 255);
-rect(portal2,232,80,140);</p>
-
-<p>if ( m &gt; portal2) {
-    background(255, 255, 255);
-    //FireBall
-fill(255, 0, 0);
-rect(fireball+160,340,5,5);
-rect(fireball+165,335,5,5);
-rect(fireball+170,335,5,5);
-rect(fireball+160,rect,5,5);
-rect(fireball+175,340,5,5);
-rect(fireball+160,345,5,5);
-rect(fireball+175,345,5,5);
-rect(fireball+165,350,5,5);
-rect(fireball+170,350,5,5);
-fill(255, 111, 0);
-rect(fireball+165,340,10,10);
-fill(255, 60, 0);
-rect(fireball+170,340,5,10);
-fill(255, 183, 0);
-rect(fireball+160,350,5,5);
-rect(fireball+160,335,5,5);
-rect(fireball+155,340,5,10);
-fill(255, 234, 0);
-rect(fireball+155,350,5,5);
-rect(fireball+150,340,5,10);
-rect(fireball+155,335,5,5);</p>
-
-<p>//Mario
-fill(255, 0, 0);
-rect(m,o,30,3);
-rect(m,o-3,21,3);
-rect(m+3,o-6,18,3);
-rect(m+9,o-9,12,3);
-fill(255, 221, 0);
-rect(m+15,o-3,6,3);
-rect(m+18,o-6,3,3);
-rect(m+21,o+3,-21,24);
-rect(m+21,o+6,9,3);
-rect(m+21,o+9,12,3);
-rect(m+21,o+12,12,3);
-rect(m+21,o+15,12,3);
-rect(m+9,o+24,15,3);
-rect(m+12,o+27,9,3);
-fill(110, 62, 0);
-rect(m+12,o+18,15,3);
-rect(m+15,o+21,12,3);
-rect(m+18,o+15,3,3);
-rect(m+12,o+3,3,6);
-rect(m+15,o+6,3,3);
-rect(m+3,o+3,3,6);
-rect(m+3,o+9,6,6);
-rect(m,o+3,6,3);
-rect(m-3,o+6,3,18);
-rect(m+-6,o+15,3,6);
-rect(m,o+24,3,3);
-fill(255, 0, 0);
-rect(m+3,o+27,9,3);
-rect(m+3,o+30,21,30);
-rect(m,o+30,6,25);
-rect(m+21,o+33,6,18);
-fill(110, 62, 0);
-rect(m+7,o+30,9,24);
-rect(m,o+30,3,9);
-rect(m+3,o+27,3,3);
-rect(m+3,o+30,3,3);
-rect(m+18,o+30,3,3);
-rect(m+18,o+33,6,3);
-rect(m+21,o+36,3,9);
-rect(m+18,o+36,3,8);
-fill(255, 213, 0);
-rect(m+24,o+42,3,3);
-rect(m+18,o+42,3,3);
-rect(m+7,o+48,9,9);
-fill(110, 62, 0);
-rect(m+8,o+60,12,12);
-rect(m+12,o+66,15,6);
-fill(255, 0, 0);
-rect(m+13,o+30,3,3);</p>
-
-<p>textSize(20);
-text("But so many unanswered Questions",portal2+10,52);
-text("Like where is princess Peach?",portal2+33,72);
-text("What made Pacman turn evil?",portal2+34,91);
-text("Was someone controlling his mind?",portal2+14,112);
-text("And if so, who?",portal2+97,132);</p>
-
-<p>fill(0, 26, 255);
-text("Find out in the sequel",portal2+79,187);
-textSize(25);
-text("Rescue Princess Peach",portal2+36,219);
-text("Part 2",portal2+140,249);</p>
-
-<p>}</p>
-
-<p>if ( o &gt; 450 ) {
-    background(0, 0, 0);
-    o = 500;
-    fill(0, 133, 0);
-    textSize(70);
-    text("YOU LOSE",15,115);
-    text("HAHA!!!",75,200);
-}</p>
-
-<p>}</p>
-
-<p>};`</p>
+`
       </section>
     </div>
 
