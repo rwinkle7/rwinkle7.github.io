@@ -1,4 +1,4 @@
-console.log(var Beaver = function(x, y) {
+var Beaver = function(x, y) {
     this.x = x;
     this.y = y;
     this.img = getImage("creatures/Hopper-Happy");
@@ -90,4 +90,3 @@ draw = function() {
     beaver.draw();
 };
 
-);
